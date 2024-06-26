@@ -32,9 +32,7 @@ const deleteFromCloudinary = async (filelink) => {
         if(!filelink) return null;
 
         //destroying file from cloudinary
-        const response = await cloudinary.uploader.destroy(filelink,{
-            resource_type:"auto"
-        })
+        const response = await cloudinary.uploader.destroy(filelink)
 
         return response
 
